@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoggingComponent } from './logging/logging.component';
+import { TextEditorComponent } from './text-editor/text-editor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoggingComponent } from './logging/logging.component';
     FooterComponent,
     HomeComponent,
     RegisterComponent,
-    LoggingComponent
+    LoggingComponent,
+    TextEditorComponent
   ],
   imports: [
     BrowserModule,

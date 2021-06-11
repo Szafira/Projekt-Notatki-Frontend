@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoggingComponent } from './logging/logging.component';
 import { RegisterComponent } from './register/register.component';
-
+import { TextEditorComponent } from './text-editor/text-editor.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -18,11 +18,15 @@ const routes: Routes = [
     component: LoggingComponent,
   },
   {
+  path: 'TextEditor',
+  component: TextEditorComponent
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  
-  }
+  } 
+ 
 ];
 
 @NgModule({
