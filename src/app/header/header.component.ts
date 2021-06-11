@@ -9,16 +9,16 @@ import { Component, OnInit } from '@angular/core';
 <a class="navbar-item">
     <img src="assets/img/ksiazki.jpg"> </a>
 
-    <a class="navbar-item">
+    <a class="navbar-item" routerLink="/home">
     Strona główna </a>
 </div>
   <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
+          <a class="button is-primary" routerLink="/register">
               <strong> Zarejestruj się </strong>
           </a>
-        <a class="button is-light">
+        <a class="button is-light" routerLink="/logging">
           Zaloguj się
         </a>
 </div>
