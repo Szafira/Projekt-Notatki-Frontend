@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 
     <a class="navbar-item" routerLink="/home">
     Strona główna </a>
+    <a class="navbar-item" routerLink="/TextEditor"> Edytor tekstu </a>
 </div>
   <div class="navbar-end">
       <div class="navbar-item">

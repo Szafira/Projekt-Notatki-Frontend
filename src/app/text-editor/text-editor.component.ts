@@ -3,12 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-text-editor',
   template: `
-  <!DOCTYPE html>
-  <html>
-  <head>
+  
+  
+  
     <script src="https://cdn.tiny.cloud/1/mm3bfz08zx0oabulhh1lo1hy7yc3hmdlanbxoaxtgd1g7cpp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  </head>
-  <body>
+  
+  
+  <section class="hero is-warning is-fullheight is-bold">
+ 
     <textarea>
       Welcome to TinyMCE!
     </textarea>
@@ -22,8 +24,10 @@ import { Component, OnInit } from '@angular/core';
         tinycomments_author: 'Author name'
       });
     </script>
-  </body>
-  </html>
+    </section>
+    
+  
+  
   `
   ,
   styles: []

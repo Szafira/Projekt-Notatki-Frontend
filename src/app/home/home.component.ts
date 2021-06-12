@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   template: `
   <section class="hero is-warning is-fullheight is-bold">
-  <div class="hero-body">
+  <div class="yellow">
     <div class="container has-text-centered">
       <p class="title">
         Witaj na stronie wymiany notatek!
@@ -23,6 +23,12 @@ import { Component, OnInit } from '@angular/core';
       background-size: cover;
       background-position: center center;
     }
+    .yellow {
+      background-color: 	#669966;
+    }
+    
+
+    
     
   `]
 })
