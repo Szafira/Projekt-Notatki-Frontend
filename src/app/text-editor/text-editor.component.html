@@ -1,20 +1,23 @@
 
-`
-  
+`<div class="form-froup row">
+ 
   <label name="tytul" for="tytul"  >Tytuł notatki</label>
         
         <br>
-        <input type="text" name="tytul" id="tytul" class="form-control">
+        <input type="text" name="tytul" id="tytul" class="form-control"  [(ngModel)]="tytul">
         <br><br>
+         
         <label name="klasa" for="klasa">Klasa</label>
         <br>
-        <input type="text" name="klasa" id="klasa" class="form-control">
+        <input type="text" name="klasa" id="klasa" class="form-control"  [(ngModel)]="klasa">
         <br><br>
         <label name="przedmiot" for="przedmiot">Przedmiot</label>
         <br>
-        <input type="text" name="przedmiot" id="przedmiot" class="form-control">
+        <input type="text" name="przedmiot" id="przedmiot" class="form-control"  [(ngModel)]="przedmiot">
         <br><br>
+      
         <editor
+         [(ngModel)]="tekst"
         type="text"
          name="tekst"
         class="form-control"
@@ -24,6 +27,7 @@
         id="tekst"
         [init]="{  }"
         initialValue=""
+        outputFormat="text"
         [inline]="false"
         plugins=""
         tagName="div"
@@ -35,11 +39,11 @@
           toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | help'
         }"
       ></editor>
-      
+      <br><br>
+      </div>
 
   <br><br>
  
-<form action="post" method="post">
-        <input type="submit" class="form-control" name="submit" value="DODAJ">
-  <form>
-  `
+<form action="" method="post">
+  <input type="submit" class="form-control" name="submit" value="DODAJ">
+  `</form>
