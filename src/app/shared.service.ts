@@ -17,6 +17,6 @@ readonly APIUrl="https://localhost:44339/";
   }
 
   AddNotatka(val:any){
-    return this.http.post<any>(this.APIUrl+'/notatka',val)
+    return this.http.post<any>(this.APIUrl+'Notatkas/edit/5',val)
   }
 }

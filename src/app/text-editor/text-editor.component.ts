@@ -21,12 +21,12 @@ export class TextEditorComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.id_notatka=this.not.id_notatka;
-    this.id_uzytkownik=this.not.id_uzytkownik;
-    this.tytul=this.not.tytul;
-    this.klasa=this.not.klasa;
-    this.przedmiot=this.not.przedmiot;
-    this.tekst=this.not.tekst;
+    this.id_notatka=this.id_notatka;
+    this.id_uzytkownik=this.id_uzytkownik;
+    this.tytul=this.tytul;
+    this.klasa=this.klasa;
+    this.przedmiot=this.przedmiot;
+    this.tekst=this.tekst;
   }
   AddNotatka(){
     var val = {id_notatka:this.id_notatka,
