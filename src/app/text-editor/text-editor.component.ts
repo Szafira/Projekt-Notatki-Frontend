@@ -1,42 +1,44 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {SharedService} from 'src/app/shared.service';
 
 @Component({
   selector: 'app-text-editor',
-  template: `
-  
-  
-  
-    <script src="https://cdn.tiny.cloud/1/mm3bfz08zx0oabulhh1lo1hy7yc3hmdlanbxoaxtgd1g7cpp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  
-  
-  <section class="hero is-warning is-fullheight is-bold">
- 
-    <textarea>
-      Welcome to TinyMCE!
-    </textarea>
-    <script>
-      tinymce.init({
-        selector: 'textarea',
-        plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-        toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
-        toolbar_mode: 'floating',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name'
-      });
-    </script>
-    </section>
-    
-  
-  
-  `
+  templateUrl: './text-editor.component.html'
   ,
   styles: []
-})
-export class TextEditorComponent implements OnInit {
+      })
 
-  constructor() { }
+export class TextEditorComponent implements OnInit {
+  constructor(private service:SharedService) { }
+  @Input() not:any;
+  id_notatka: string | undefined;
+  id_uzytkownik: string | undefined;
+  tytul: string | undefined;
+  klasa: string | undefined;
+  przedmiot: string | undefined;
+  tekst: string | undefined;
+
+ 
 
   ngOnInit(): void {
+    this.id_notatka=this.not.id_notatka;
+    this.id_uzytkownik=this.not.id_uzytkownik;
+    this.tytul=this.not.tytul;
+    this.klasa=this.not.klasa;
+    this.przedmiot=this.not.przedmiot;
+    this.tekst=this.not.tekst;
+  }
+  AddNotatka(){
+    var val = {id_notatka:this.id_notatka,
+                id_uzytkownik:this.id_uzytkownik,
+                tytul:this.tytul,
+                klasa:this.klasa,
+                przedmiot:this.przedmiot,
+                tekst:this.tekst
+              };
+    this.service.AddNotatka(val).subscribe(res=>{
+      alert(res.toString());
+    });
   }
 
 }
