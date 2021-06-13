@@ -1,5 +1,5 @@
 
-`<div class="form-froup row">
+`<div class="container" >
  
   <label name="tytul" for="tytul"  >Tytuł notatki</label>
         
@@ -17,6 +17,7 @@
         <br><br>
       
         <editor
+        selector="textarea"
          [(ngModel)]="tekst"
         type="text"
          name="tekst"
@@ -39,11 +40,13 @@
           toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | help'
         }"
       ></editor>
-      <br><br>
-      </div>
+      
+      
 
   <br><br>
  
 <form action="" method="post">
-  <input type="submit" class="form-control" name="submit" value="DODAJ">
+  <input type="submit" class="form-control" name="submit" value="DODAJ" >
   `</form>
+  
+</div>
