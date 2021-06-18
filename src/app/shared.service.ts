@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { RegisterComponent } from './register/register.component';
 
 
 @Injectable({
@@ -12,11 +13,18 @@ readonly APIUrl="https://localhost:44339/";
 
   constructor(private http:HttpClient) { }
  
+  postRegister(form: RegisterComponent)
+  {
+    return this.http.post('http://localhost:44339/register', form);
+  }
+
+  getLogin(){}
+ 
   GetNotatkaList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/text-editor');
   }
 
   AddNotatka(val:any){
-    return this.http.post<any>(this.APIUrl+'Notatkas/edit/5',val)
+    return this.http.post<JSON>(this.APIUrl+'notatka/post',val)
   }
 }
