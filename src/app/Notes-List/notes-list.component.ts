@@ -1,23 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import {SharedService} from 'src/app/shared.service';
 
 @Component({
-  selector: 'app-text-editor',
-  templateUrl: './text-editor.component.html'
+  selector: 'app-notes-list',
+  templateUrl: './notes-list.component.html'
   ,
   styles: []
       })
 
-export class TextEditorComponent implements OnInit {
+export class NotesListComponent implements OnInit {
   constructor(private service:SharedService) { }
   @Input() not:any;
+  notatka: any = []
   id_notatka: string | undefined;
   id_uzytkownik: string | undefined;
   tytul: string | undefined;
   klasa: string | undefined;
   przedmiot: string | undefined;
   tekst: string | undefined;
-
+  
  
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class TextEditorComponent implements OnInit {
     this.przedmiot=this.przedmiot;
     this.tekst=this.tekst;
   }
-  AddNotes(){
+  GetNotesList(){
     var notatka = {id_notatka:this.id_notatka,
                 id_uzytkownik:this.id_uzytkownik,
                 tytul:this.tytul,
@@ -36,9 +37,24 @@ export class TextEditorComponent implements OnInit {
                 przedmiot:this.przedmiot,
                 tekst:this.tekst
               };
-    this.service.AddNotes(notatka).subscribe(res=>{
-      alert(res.toString());
+    this.service.GetNotesList().subscribe((res)=>{
+      this.notatka = res
     });
   }
+  GetNote(){
+    var notatka = {id_notatka:this.id_notatka,
+                id_uzytkownik:this.id_uzytkownik,
+                tytul:this.tytul,
+                klasa:this.klasa,
+                przedmiot:this.przedmiot,
+                tekst:this.tekst
+              };
+    this.service.GetNote(this.id_notatka).subscribe((res)=>{
+      this.notatka = res
+    });
+  }
+}
 
+export class NotesList{
+private notatka: any = []
 }

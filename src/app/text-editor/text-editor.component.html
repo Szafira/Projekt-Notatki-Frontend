@@ -19,7 +19,7 @@
         <editor
         selector="textarea"
          [(ngModel)]="tekst"
-        type="text"
+        type="html"
          name="tekst"
         class="form-control"
         apiKey="mqd6gpc2fyqqp4il5y85xwehffq0y4drc7b1lenoemoq1b4r"
@@ -28,7 +28,7 @@
         id="tekst"
         [init]="{  }"
         initialValue=""
-        outputFormat="text"
+        outputFormat="html"
         [inline]="false"
         plugins=""
         tagName="div"
@@ -46,7 +46,7 @@
   <br><br>
  
 <form action="" method="post">
-  <input type="submit" class="form-control" name="submit" (click)="AddNotatka()" >
-  `</form>
+  <input type="submit" class="form-control" name="submit" (click)="AddNotes()" >
+  </form>
   
 </div>

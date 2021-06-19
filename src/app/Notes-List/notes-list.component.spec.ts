@@ -1,22 +1,22 @@
 import { EventEmitter } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextEditorComponent } from './text-editor.component';
+import { NotesListComponent } from './notes-list.component';
 
 
-describe('TextEditorComponent', () => {
-  let component: TextEditorComponent;
-  let fixture: ComponentFixture<TextEditorComponent>;
+describe('NotesListComponent', () => {
+  let component: NotesListComponent;
+  let fixture: ComponentFixture<NotesListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextEditorComponent ]
+      declarations: [ NotesListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TextEditorComponent);
+    fixture = TestBed.createComponent(NotesListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

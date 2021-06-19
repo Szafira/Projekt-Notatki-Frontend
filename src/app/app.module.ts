@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoggingComponent } from './logging/logging.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { NotesListComponent } from './Notes-List/notes-list.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +22,9 @@ import {ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     RegisterComponent,
     LoggingComponent,
-    TextEditorComponent
+    TextEditorComponent,
+    NotesListComponent
+
   ],
   imports: [
     BrowserModule,
