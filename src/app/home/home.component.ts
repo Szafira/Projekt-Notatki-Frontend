@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
         Witaj na stronie wymiany notatek!
       </p>
       <p class="subtitle">
-        Nasza strona ma za zadanie pomóc Ci w Twojej nauce. <br> Aby zacząć musisz się zarejestrować, bądź zalogować.
+        Nasza strona ma za zadanie pomóc Ci w Twojej nauce. <br>
       </p>
     </div>
   </div>

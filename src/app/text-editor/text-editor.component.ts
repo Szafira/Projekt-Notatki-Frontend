@@ -37,7 +37,7 @@ export class TextEditorComponent implements OnInit {
                 tekst:this.tekst
               };
     this.service.AddNotes(notatka).subscribe(res=>{
-      alert(res.toString());
+      (res.toString());
     });
   }
 

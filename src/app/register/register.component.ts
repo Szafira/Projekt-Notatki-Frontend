@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import {SharedService} from 'src/app/shared.service';
 @Component({
   selector: 'app-register',
   template: `
@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
     <section class="section">
       <div class="container">
 
-        <form (ngSubmit)="submitForm()" #walidacjaForm="ngForm">
+        <form (ngSubmit)="Register()" #walidacjaForm="ngForm">
 
           <div class="field">
             <label class="label"> Utwórz login </label>
@@ -73,11 +73,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class RegisterComponent implements OnInit {
+  constructor(private service:SharedService) { }
+  @Input() not:any;
+  id_uzytkownika: string | undefined;
   login: string | undefined;
   haslo: string | undefined;
   email: string | undefined;
-
-  constructor() { }
 
   ngOnInit(): void {
   }
@@ -89,4 +90,15 @@ export class RegisterComponent implements OnInit {
       alert(wiadomosc);
   }
 
+  Register(){
+    var val = {
+                id_uzytkownika:this.id_uzytkownika,
+                nazwa_uzytkownika:this.login,
+                email:this.email,
+                haslo:this.haslo
+              };
+    this.service.Register(val).subscribe(res=>{
+      (res.toString());
+});
+  }
 }
