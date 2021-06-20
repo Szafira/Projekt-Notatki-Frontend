@@ -1,0 +1,52 @@
+
+<div class="container" >
+ 
+  <label name="tytul" for="tytul"  >Tytuł notatki</label>
+        
+        <br>
+        <input type="text" name="tytul" id="tytul" class="form-control"  [(ngModel)]="tytul">
+        <br><br>
+         
+        <label name="klasa" for="klasa">Klasa</label>
+        <br>
+        <input type="text" name="klasa" id="klasa" class="form-control"  [(ngModel)]="klasa">
+        <br><br>
+        <label name="przedmiot" for="przedmiot">Przedmiot</label>
+        <br>
+        <input type="text" name="przedmiot" id="przedmiot" class="form-control"  [(ngModel)]="przedmiot">
+        <br><br>
+      
+        <editor
+        selector="textarea"
+         [(ngModel)]="tekst"
+        type="html"
+         name="tekst"
+        class="form-control"
+        apiKey="mqd6gpc2fyqqp4il5y85xwehffq0y4drc7b1lenoemoq1b4r"
+        cloudChannel="5"
+        [disabled]="false"
+        id="tekst"
+        [init]="{  }"
+        initialValue=""
+        outputFormat="html"
+        [inline]="false"
+        plugins=""
+        tagName="div"
+        toolbar=""
+        [init]="{
+          plugins: [
+           'lists link image paste help wordcount'
+          ],
+          toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | help'
+        }"
+      ></editor>
+      
+      
+
+  <br><br>
+ 
+<form action="" method="post">
+  <input type="submit" class="form-control" name="submit" (click)="AddNotes()" >
+  </form>
+  
+</div>

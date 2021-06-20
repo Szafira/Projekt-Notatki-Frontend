@@ -1,0 +1,15 @@
+<div class="container" >
+
+    <form action="" method="get">
+    <button type="submit" class="form-control" name="submit" (click)="GetNotesList()" >Wyswietl notatki</button>
+    </form>
+    <label name="tytul" for="tytul"  ><strong>Tytuł notatki</strong></label>
+    <div *ngFor="let obj of notatka">
+        <table border="2" style=" width:100%; border-color: aquamarine;">
+          <strong><ul [innerHTML]=" obj.tytul"></ul></strong>
+        <ul [innerHTML]=" obj.tekst"></ul>
+      </table>
+    </div>
+   </div>
+        
+
